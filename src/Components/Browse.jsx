@@ -3,12 +3,15 @@ import { useEffect } from 'react'
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
 import MainContainer from './MainContainer'
 import SecondaryContainer from './SecondaryContainer'
+import usePopularMovies from '../hooks/usePopularMovies'
+
 const Browse = () => {
 
     //here just create a custom hooks and fetch all movies and update the redux store
     useNowPlayingMovies();
+    usePopularMovies();
   return (
-    <div>
+    <div className='relative '>
         {/* 
          
          -header
@@ -21,6 +24,7 @@ const Browse = () => {
         
         
         */}
+        {/* <GptSearch/> */}
         <MainContainer/>
         <SecondaryContainer/>
     </div>
