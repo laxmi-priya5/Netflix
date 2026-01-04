@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import Login from './Login'
 import Browse from './Browse'
-import Header from './Header'
+import Header from './Header.js'
 import { Outlet, useNavigate } from 'react-router-dom'
 import {  onAuthStateChanged } from "firebase/auth";
-import { auth } from '../utils/firebase'
+import { auth } from '../utils/firebase.js'
 import { useDispatch } from 'react-redux'
-import { addUser, removeUser } from '../utils/userSlice'
+import { addUser, removeUser } from '../utils/userSlice.js'
 
 const Body = () => {
   const dispatch = useDispatch();
